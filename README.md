@@ -68,7 +68,7 @@ The MySQL database consists of the following tables:
    ```
 
 ## Screenshot of Output
-![Project Output](images/output.png)
+![Project Output](https://github.com/rohithachandhaluru/fashionhub/blob/main/images/banner.jpg?raw=true)
 
 ## License
 This project is open-source and free to use under the MIT License.
