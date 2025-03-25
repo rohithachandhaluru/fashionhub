@@ -1,77 +1,106 @@
-# Fancy Shop Website
+Fancy Trends - E-commerce Website
+🛍️ A simple e-commerce website where users can browse products and place orders. Admins can manage orders through a panel with options to add, update, and delete orders.
 
-## Project Overview
-Fancy Shop is a simple e-commerce website where users can browse fancy items, learn about the shop, contact the owners, and manage products through an admin panel. The project includes frontend and backend integration using HTML, CSS, JavaScript, and PHP with a MySQL database.
+📌 Project Structure
+bash
+Copy
+Edit
+fancy-trends/
+│── images/              # Product images
+│── styles.css           # Styling for the website
+│── index.html           # Homepage
+│── products.html        # Products listing page
+│── order.html           # Order form page
+│── admin_orders.php     # Admin panel for managing orders
+│── order.php            # Backend PHP file to process orders
+│── database.sql         # Database structure
+│── README.md            # Documentation
+⚡ Features
+✅ View and purchase products
+✅ Simple order form (name, email)
+✅ Store orders in MySQL database
+✅ Admin panel to update & delete orders
+✅ Responsive design
 
-## Features
-- **Home Page:** Displays a welcome message and featured products.
-- **Products Page:** Lists all available fancy items.
-- **About Us Page:** Provides information about the shop.
-- **Contact Page:** Includes a simple form for users to send messages.
-- **Admin Page:** Allows admins to add or remove products.
+🛠️ Technologies Used
+Frontend: HTML, CSS
 
-## Project Structure
-```
-Fancy-Shop/
-│── index.html          # Home Page
-│── products.html       # Products Page
-│── about.html         # About Us Page
-│── contact.html       # Contact Page
-│── admin.html         # Admin Page
-│── styles.css         # Stylesheet
-│── script.js          # JavaScript file (if required)
-│── images/            # Folder for storing images
-│── backend/           # Folder for PHP scripts
-│── database/          # Database files
-└── README.md          # Project documentation
-```
+Backend: PHP, MySQL
 
-## Technologies Used
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** PHP
-- **Database:** MySQL
+Database: MySQL (via phpMyAdmin)
 
-## Database Structure
-The MySQL database consists of the following tables:
+Server: XAMPP (for local testing)
 
-### `products` Table
-| Column Name | Data Type  | Description |
-|------------|-----------|-------------|
-| id         | INT (AUTO_INCREMENT) | Primary key |
-| name       | VARCHAR(255) | Product name |
-| price      | DECIMAL(10,2) | Product price |
-| image      | VARCHAR(255) | Image URL |
+📂 Database Setup
+Create Database:
 
-### `messages` Table (for Contact Form)
-| Column Name | Data Type | Description |
-|------------|-----------|-------------|
-| id         | INT (AUTO_INCREMENT) | Primary key |
-| name       | VARCHAR(255) | Sender name |
-| email      | VARCHAR(255) | Sender email |
-| message    | TEXT | Contact message |
+sql
+Copy
+Edit
+CREATE DATABASE fancy_shop;
+Create Orders Table:
 
-## How to Run This Project
-### Prerequisites
-- Install **XAMPP** (or any server with PHP & MySQL support).
+sql
+Copy
+Edit
+CREATE TABLE orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    item VARCHAR(100) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+🚀 How to Run This Project Locally
+1️⃣ Setup Environment
+Install XAMPP (for Apache & MySQL)
 
-### Steps to Run
-1. Clone this repository:
-   ```sh
-   git clone https://github.com/your-username/Fancy-Shop.git
-   ```
-2. Move the project to the XAMPP `htdocs` folder.
-3. Start Apache and MySQL from XAMPP.
-4. Create a database in phpMyAdmin and import `database/schema.sql`.
-5. Open the browser and go to:
-   ```
-   http://localhost/Fancy-Shop/index.html
-   ```
+Start Apache and MySQL from XAMPP control panel
 
-## Screenshot of Output
-![Project Output]![image](https://github.com/user-attachments/assets/d19663d2-4b40-4c73-9d1f-72546b449df1)
-![image](https://github.com/user-attachments/assets/05af04bf-62fa-4b60-acc9-d54fe4a2ce28)
+2️⃣ Clone the Repository
+sh
+Copy
+Edit
+git clone https://github.com/yourusername/fancy-trends.git
+cd fancy-trends
+3️⃣ Import Database
+Open phpMyAdmin (http://localhost/phpmyadmin)
 
+Create database fancy_shop
 
+Import database.sql
 
-## License
-This project is open-source and free to use under the MIT License.
+4️⃣ Run the Project
+Move project folder to htdocs (inside XAMPP)
+
+Open browser and visit:
+
+arduino
+Copy
+Edit
+http://localhost/fancy-trends/index.html
+5️⃣ Admin Panel
+Open: http://localhost/fancy-trends/admin_orders.php
+
+Manage orders (Edit / Delete)
+
+📸 Output Screenshots
+Homepage
+
+Products Page
+
+Order Form
+
+Admin Panel
+
+📝 Contribution
+🔹 Fork the repo
+🔹 Create a new branch (feature-branch)
+🔹 Commit changes (git commit -m "Added new feature")
+🔹 Push changes (git push origin feature-branch)
+🔹 Submit a Pull Request
+
+📩 Contact
+For any issues, feel free to reach out:
+📧 Email: fancytrends@example.com
+
