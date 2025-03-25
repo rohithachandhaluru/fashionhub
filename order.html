@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Your Product</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="admin.php">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="order-form">
+        <h2>Complete Your Order</h2>
+        <form action="order.php" method="post">
+            <input type="text" name="name" placeholder="Enter your Name" required>
+            <input type="email" name="email" placeholder="Enter your Email" required>
+            <input type="hidden" name="item" id="item">
+            <input type="hidden" name="price" id="price">
+            <button type="submit">Buy Now</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Follow us on Social Media | Contact: fancytrends@example.com</p>
+    </footer>
+
+    <script>
+        // Get item and price from URL and set hidden input values
+        const urlParams = new URLSearchParams(window.location.search);
+        document.getElementById("item").value = urlParams.get("item");
+        document.getElementById("price").value = urlParams.get("price");
+    </script>
+
+</body>
+</html>
