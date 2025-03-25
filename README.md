@@ -75,13 +75,13 @@ http://localhost/fancy-trends/index.html
 - Manage orders (Edit / Delete)
 
 ## 📸 Output Screenshots
-- Homepage
+## Homepage
 ![image](https://github.com/user-attachments/assets/d19663d2-4b40-4c73-9d1f-72546b449df1)
-- Products Page
+##  Products Page
 ![image](https://github.com/user-attachments/assets/05af04bf-62fa-4b60-acc9-d54fe4a2ce28)
-- Order Form
+## Order Form
 ![image](https://github.com/user-attachments/assets/050a9543-7c0b-4a5c-ac2a-9bc817fe4e8e)
-- Admin Panel
+## Admin Panel
 ![image](https://github.com/user-attachments/assets/aa4b698c-cc51-4d07-945e-8cb9fe0f4fa2)
 
 
@@ -92,5 +92,3 @@ http://localhost/fancy-trends/index.html
 🔹 Push changes (`git push origin feature-branch`)  
 🔹 Submit a Pull Request  
 
-## 📜 License
-This project is open-source and available under the MIT License.
